@@ -67,7 +67,7 @@ public class UsuarioController {
         }
 
         return ResponseEntity.status(HttpStatus.OK)
-                            .body(erro);
+                            .body("Livro deletado com sucesso");
     }
 
     @PutMapping("/{cpf}")

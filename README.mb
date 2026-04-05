@@ -1,0 +1,72 @@
+# Biblioteca API
+
+API REST desenvolvida com Spring Boot para gerenciamento de livros, usuários e empréstimos de uma biblioteca.
+
+## Funcionalidades
+
+- Cadastro de livros
+- Listagem de livros
+- Busca de livro por ID
+- Remoção de livro
+
+- Cadastro de usuários
+- Listagem de usuários
+- Busca de usuário por CPF
+- Remoção de usuário
+
+- Realização de empréstimos
+- Listagem de empréstimos
+- Listagem de empréstimos ativos
+- Devolução de livros
+
+---
+
+## Tecnologias utilizadas
+
+- Java
+- Spring Boot
+- Maven
+- Spring Web
+- Bean Validation
+
+---
+
+## Estrutura do projeto
+
+- `controller` → recebe as requisições HTTP
+- `service` → contém as regras de negócio
+- `model` → representa as entidades da aplicação
+
+---
+
+## Endpoints principais
+
+### Livros
+- `POST /livros` → cadastrar livro
+- `GET /livros` → listar livros
+- `GET /livros/{id}` → buscar livro por ID
+- `DELETE /livros/{id}` → remover livro
+
+### Usuários
+- `POST /usuarios` → cadastrar usuário
+- `GET /usuarios` → listar usuários
+- `GET /usuarios/{cpf}` → buscar usuário por CPF
+- `DELETE /usuarios/{cpf}` → remover usuário
+
+### Empréstimos
+- `POST /emprestimos` → realizar empréstimo
+- `GET /emprestimos` → listar empréstimos
+- `GET /emprestimos/ativos` → listar empréstimos ativos
+- `PUT /emprestimos/{idEmprestimo}/devolucao` → devolver livro
+
+---
+
+## Exemplo de JSON
+
+### Cadastrar livro
+```json
+{
+  "id": 1,
+  "titulo": "Clean Code",
+  "autor": "Robert C. Martin"
+}
