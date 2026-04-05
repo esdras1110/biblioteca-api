@@ -1,72 +1,71 @@
-# Biblioteca API
+# 📚 Biblioteca API
 
-API REST desenvolvida com Spring Boot para gerenciamento de livros, usuários e empréstimos de uma biblioteca.
-
-## Funcionalidades
-
-- Cadastro de livros
-- Listagem de livros
-- Busca de livro por ID
-- Remoção de livro
-
-- Cadastro de usuários
-- Listagem de usuários
-- Busca de usuário por CPF
-- Remoção de usuário
-
-- Realização de empréstimos
-- Listagem de empréstimos
-- Listagem de empréstimos ativos
-- Devolução de livros
+API REST desenvolvida com **Spring Boot** para gerenciamento de **livros**, **usuários** e **empréstimos** em uma biblioteca.
 
 ---
 
-## Tecnologias utilizadas
+## 🚀 Funcionalidades
 
-- Java
-- Spring Boot
-- Maven
-- Spring Web
-- Bean Validation
+### 📖 Livros
+- Cadastrar livro
+- Listar livros
+- Buscar livro por ID
+- Remover livro
 
----
+### 👤 Usuários
+- Cadastrar usuário
+- Listar usuários
+- Buscar usuário por CPF
+- Remover usuário
 
-## Estrutura do projeto
-
-- `controller` → recebe as requisições HTTP
-- `service` → contém as regras de negócio
-- `model` → representa as entidades da aplicação
-
----
-
-## Endpoints principais
-
-### Livros
-- `POST /livros` → cadastrar livro
-- `GET /livros` → listar livros
-- `GET /livros/{id}` → buscar livro por ID
-- `DELETE /livros/{id}` → remover livro
-
-### Usuários
-- `POST /usuarios` → cadastrar usuário
-- `GET /usuarios` → listar usuários
-- `GET /usuarios/{cpf}` → buscar usuário por CPF
-- `DELETE /usuarios/{cpf}` → remover usuário
-
-### Empréstimos
-- `POST /emprestimos` → realizar empréstimo
-- `GET /emprestimos` → listar empréstimos
-- `GET /emprestimos/ativos` → listar empréstimos ativos
-- `PUT /emprestimos/{idEmprestimo}/devolucao` → devolver livro
+### 🔄 Empréstimos
+- Realizar empréstimo de livro
+- Listar todos os empréstimos
+- Listar empréstimos ativos
+- Devolver livro
 
 ---
 
-## Exemplo de JSON
+## 🛠️ Tecnologias utilizadas
 
-### Cadastrar livro
-```json
-{
-  "id": 1,
-  "titulo": "Clean Code",
-  "autor": "Robert C. Martin"
-}
+- **Java**
+- **Spring Boot**
+- **Maven**
+- **Spring Web**
+- **Bean Validation**
+
+---
+
+## 🌐 Endpoints principais
+
+### 📖 Livros
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| `POST` | `/livros` | Cadastrar livro |
+| `GET` | `/livros` | Listar livros |
+| `GET` | `/livros/{id}` | Buscar livro por ID |
+| `DELETE` | `/livros/{id}` | Remover livro |
+
+### 👤 Usuários
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| `POST` | `/usuarios` | Cadastrar usuário |
+| `GET` | `/usuarios` | Listar usuários |
+| `GET` | `/usuarios/{cpf}` | Buscar usuário por CPF |
+| `DELETE` | `/usuarios/{cpf}` | Remover usuário |
+
+### 🔄 Empréstimos
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| `POST` | `/emprestimos` | Realizar empréstimo |
+| `GET` | `/emprestimos` | Listar empréstimos |
+| `GET` | `/emprestimos/ativos` | Listar empréstimos ativos |
+| `PUT` | `/emprestimos/{idEmprestimo}/devolucao` | Devolver livro |
+
+## 📂 Estrutura do projeto
+
+``` 
+src/
+ ├── controller   # Endpoints da API
+ ├── service      # Regras de negócio
+ └── model        # Entidades da aplicação
